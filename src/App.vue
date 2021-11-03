@@ -15,13 +15,11 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 
 html,
 body {
-  margin: 30px 0 0 0;
+  margin: 30px 0;
   padding: 0;
   overflow-x: hidden;
 }
@@ -30,26 +28,31 @@ body {
   background-color: whitesmoke;
 }
 
+h1 {
+  color: lightgray;
+}
+
 .nav {
   position: fixed;
   top: 0;
+  display: flex;
+  justify-content: center;
   padding: 10px;
   width: 100%;
   height: 30px;
-  background-color: rgba($color: white, $alpha: 0.9);
-  box-shadow: 0 0 10px lightgray;
+  background-color: rgba($color: blue, $alpha: 0.9);
+  box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.2);
   line-height: 30px;
+  z-index: 1;
 
   a {
     font-weight: bold;
-    color: darkgray;
-    text-decoration: none;
+    color: whitesmoke;
     margin: 0 5px;
-    font-size: 1.25rem;
     transition: 0.2s color;
 
     &:active {
-      color: #2c3e50;
+      color: navy;
     }
   }
 }

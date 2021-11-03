@@ -1,10 +1,10 @@
 <template>
-  <h1>Home</h1>
   <div class="product-cards-container">
-    <product-summary-card
+    <ProductSummaryCard
       v-for="product in items"
       :key="product.id"
       :product="product"
+      @view-product="viewProduct($event)"
     />
   </div>
 </template>
@@ -18,12 +18,17 @@ export default {
   data() {
     return {
       items: [],
+      product: null,
     };
   },
   async created() {
     this.items = await this.getProducts();
   },
   methods: {
+    viewProduct(product) {
+      this.product = product;
+      console.log(this.product);
+    },
     async getProducts() {
       try {
         const res = await fetch(
