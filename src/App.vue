@@ -1,9 +1,13 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link :class="{ active: $route.name === 'Home' }" to="/"
+      >Home</router-link
+    >
+    <router-link :class="{ active: $route.name === 'Cart' }" to="/cart"
+      >Cart</router-link
+    >
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="scss">
@@ -15,16 +19,39 @@
   color: #2c3e50;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
 #nav {
-  padding: 30px;
+  padding: 10px;
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+  line-height: 30px;
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: darkgray;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 1.25rem;
+    transition: 0.2s color;
 
-    &.router-link-exact-active {
-      color: #42b983;
+    &:active {
+      color: #2c3e50;
     }
   }
+}
+
+.text-center {
+  text-align: center;
 }
 </style>
