@@ -1,4 +1,5 @@
 <template>
+  <h1>Home</h1>
   <div class="product-cards-container">
     <product-summary-card
       v-for="product in items"

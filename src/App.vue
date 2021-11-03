@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div class="nav">
     <router-link :class="{ active: $route.name === 'Home' }" to="/"
       >Home</router-link
     >
@@ -21,7 +21,7 @@
 
 html,
 body {
-  margin: 0;
+  margin: 30px 0 0 0;
   padding: 0;
   overflow-x: hidden;
 }
@@ -30,11 +30,14 @@ body {
   background-color: whitesmoke;
 }
 
-#nav {
+.nav {
+  position: fixed;
+  top: 0;
   padding: 10px;
   width: 100%;
   height: 30px;
-  background-color: #fff;
+  background-color: rgba($color: white, $alpha: 0.9);
+  box-shadow: 0 0 10px lightgray;
   line-height: 30px;
 
   a {
