@@ -53,21 +53,19 @@ export default {
   margin: 5%;
   padding: 20px;
   color: whitesmoke;
-  box-shadow: 5px 5px 10px rgba($color: black, $alpha: 0.5);
-  border-radius: 12px;
+  border-radius: 0 20px 0 0;
   transition: 0.2s transform;
   overflow: hidden;
 
   &::after {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     height: 100%;
     width: 100%;
     content: "";
-    backdrop-filter: blur(2px);
     background-color: black;
-    opacity: 0.7;
+    opacity: 0.9;
   }
 
   &:hover {

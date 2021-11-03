@@ -19,7 +19,7 @@
 
 html,
 body {
-  margin: 30px 0;
+  margin: 40px 0;
   padding: 0;
 }
 
@@ -32,28 +32,28 @@ body {
   top: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 10px 0;
   width: 100%;
-  height: 30px;
-  background-color: rgba($color: black, $alpha: 0.6);
-  box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.4);
-  line-height: 30px;
+  height: 40px;
+  background-color: rgba($color: white, $alpha: 0.9);
+  box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.1);
   z-index: 100;
   backdrop-filter: blur(2px);
 
   a {
     font-weight: bold;
-    color: whitesmoke;
+    color: black;
     margin: 0 10px;
-    transition: 0.2s color, 0.2s transform;
+    transition: 0.2s opacity;
     text-decoration: none;
 
     &:hover {
-      transform: translateY(-1px);
-      }
+      text-decoration: underline;
+    }
 
     &:active {
-      opacity: 0.8;
+      opacity: 0.7;
     }
   }
 }
