@@ -21,15 +21,10 @@ html,
 body {
   margin: 30px 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 body {
   background-color: whitesmoke;
-}
-
-h1 {
-  color: lightgray;
 }
 
 .nav {
@@ -37,22 +32,28 @@ h1 {
   top: 0;
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 10px 0;
   width: 100%;
   height: 30px;
-  background-color: rgba($color: blue, $alpha: 0.9);
-  box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.2);
+  background-color: rgba($color: black, $alpha: 0.6);
+  box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.4);
   line-height: 30px;
-  z-index: 1;
+  z-index: 100;
+  backdrop-filter: blur(2px);
 
   a {
     font-weight: bold;
     color: whitesmoke;
-    margin: 0 5px;
-    transition: 0.2s color;
+    margin: 0 10px;
+    transition: 0.2s color, 0.2s transform;
+    text-decoration: none;
+
+    &:hover {
+      transform: translateY(-1px);
+      }
 
     &:active {
-      color: navy;
+      opacity: 0.8;
     }
   }
 }
