@@ -1,8 +1,6 @@
 <template>
   <div class="nav">
-    <router-link :class="{ active: $route.name === 'Home' }" to="/"
-      >Home</router-link
-    >
+    <router-link to="/">Home</router-link>
   </div>
   <router-view />
 </template>
