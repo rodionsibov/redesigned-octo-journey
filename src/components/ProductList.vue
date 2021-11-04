@@ -1,0 +1,26 @@
+<template>
+  <ProductCard
+    v-for="product in products"
+    :key="product.id"
+    :product="product"
+  />
+</template>
+
+<script>
+import ProductCard from "@/components/ProductCard.vue";
+
+export default {
+  components: { ProductCard },
+  computed: {
+      products() {
+          return this.$store.state.products
+      }
+  },
+  mounted() {
+    this.$store.dispatch("getProducts");
+  },
+};
+</script>
+
+<style>
+</style>
