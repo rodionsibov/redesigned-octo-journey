@@ -1,4 +1,8 @@
 <template>
+  <ProductDescriptionDrawer
+    :product="product"
+    :active="active.product_drawer"
+  />
   <div class="product-cards-container">
     <ProductSummaryCard
       v-for="product in items"
@@ -11,14 +15,21 @@
 
 <script>
 import ProductSummaryCard from "@/components/ProductSummaryCart.vue";
+import ProductDescriptionDrawer from "@/components/ProductDescriptionDrawer.vue";
 
 export default {
   name: "Home",
-  components: { ProductSummaryCard },
+  components: {
+    ProductSummaryCard,
+    ProductDescriptionDrawer,
+  },
   data() {
     return {
       items: [],
       product: null,
+      active: {
+        product_drawer: false,
+      },
     };
   },
   async created() {
