@@ -8,18 +8,19 @@
     <div class="row"></div>
   </div>
   <div class="container d-flex gap-2 flex-wrap justify-content-center">
-    {{ categories[0] }}
-    <!-- <CategoryBox v-for="category in categories.length" :category="category" :key="category.id" /> -->
+    <div v-for="category in categories" :key="category.id">
+      <CategoryBox :category="category" />
+    </div>
   </div>
 </template>
 
 <script>
-// import CategoryBox from "@/components/CategoryBox.vue";
+import CategoryBox from "@/components/CategoryBox.vue";
 
 export default {
   name: "Category",
   components: {
-    // CategoryBox,
+    CategoryBox,
   },
   data() {
     return {
