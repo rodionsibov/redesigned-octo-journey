@@ -7,7 +7,7 @@
     </div>
     <div class="row"></div>
   </div>
-  <div class="container d-flex gap-2 flex-wrap justify-content-center">
+  <div class="container d-flex gap-3 flex-wrap justify-content-center">
     <div v-for="category in categories" :key="category.id">
       <CategoryBox :category="category" />
     </div>
