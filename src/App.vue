@@ -1,9 +1,10 @@
 <template>
   <div class="nav justify-content-center">
-    <li class="nav-item">
-      <router-link to="/" class="nav-link">Home</router-link>
-    </li>
+    <router-link class="nav-link" to="/">Home</router-link>
+    <router-link class="nav-link" to="/admin/category/add"
+      >Add Category</router-link
+    >
+    <router-link class="nav-link" to="/admin/category">Category</router-link>
   </div>
-  <router-view class="mt-3" />
+  <router-view />
 </template>
-

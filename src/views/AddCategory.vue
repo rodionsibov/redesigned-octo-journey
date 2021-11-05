@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container col-md-6">
     <div class="row">
       <div class="text-center">
         <h3 class="display-5 mb-4">Add Category</h3>
@@ -9,7 +9,7 @@
       <form>
         <div class="form-group mb-4">
           <label for="" class="form-label">Name</label>
-          <input type="text" class="form-control" v-model="catagoryName" />
+          <input type="text" class="form-control" v-model="categoryName" />
         </div>
         <div class="form-group mb-4">
           <label for="" class="form-label">Description</label>
@@ -20,7 +20,9 @@
           <input type="text" class="form-control" v-model="imageUrl" />
         </div>
         <div class="d-grid col-md-6 mx-auto">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-primary" @click="addCategory">
+            Submit
+          </button>
         </div>
       </form>
     </div>
@@ -29,12 +31,34 @@
 
 <script>
 export default {
+  name: 'AddCategory',
   data() {
     return {
-      catagoryName: "",
+      categoryName: "",
       description: "",
       imageUrl: "",
     };
+  },
+  methods: {
+    async addCategory() {
+      try {
+        const newCategory = {
+          categoryName: this.categoryName,
+          description: this.description,
+          imageUrl: this.imageUrl,
+        };
+        console.log('New Category:', newCategory);
+        
+        const res = await fetch(
+          "https://my-json-server.typicode.com/Nelzio/ecommerce-fake-json/products"
+        );
+        const data = await res.json();
+        // this.description = JSON.stringify(data);
+        console.log(data);
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 </script>

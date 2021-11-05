@@ -1,20 +1,15 @@
 <template>
-  <div class="product-cards-container">
-    <ProductList />
-  </div>
+  <h1>Home</h1>
 </template>
 
 <script>
-import ProductList from "@/components/ProductList.vue";
 
 export default {
+  name: 'Home',
   components: {
-    ProductList,
   },
- 
 };
 </script>
 
 <style lang="scss" scoped>
-
 </style>
