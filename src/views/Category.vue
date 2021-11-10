@@ -3,13 +3,17 @@
     <div class="row">
       <div class="text-center">
         <h3 class="display-5 mb-4">Our Categories</h3>
+        <router-link :to="{name: 'Add Category'}">
+            <button class="btn btn-secondary btn-sm mb-3 float-end">Add Category</button>
+        </router-link>
       </div>
     </div>
-    <div class="row"></div>
-  </div>
-  <div class="container d-flex gap-3 flex-wrap justify-content-center">
-    <div v-for="category in categories" :key="category.id">
-      <CategoryBox :category="category" />
+    <div class="row">
+      <div class="container d-flex gap-3 flex-wrap justify-content-center">
+        <div v-for="category in categories" :key="category.id">
+          <CategoryBox :category="category" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
